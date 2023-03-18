@@ -271,7 +271,7 @@ Escape Sequences Characters
   -- \"
   -- \'
   -- \t => Tab Equal 8 Spaces
-  -- \b
+  -- \b => Backspace
   -- \a => Alert => Play Beep During Execution
   -- \r => Carriage Return
 
