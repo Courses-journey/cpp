@@ -593,3 +593,136 @@ Data Types
     - function like casting
   - `(int)c`
     - casting
+
+# 024 - Operators - Arithmetic Operators
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Arithmetic Operators
+  "For Mathematical Operations"
+
+  - `+` => Addition
+  - `-` => Subtraction
+  - `*` => Multiplication
+  - `/` => Division
+  - `%` => Modulo => Remainder After Division
+    - working with `int`
+
+# 025 - Operators - Assignment Operators
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Assignment Operators
+  "For Assigning Operations"
+
+  - `=` Assign
+  - `+=` Addition
+  - `-=` Subtraction
+  - `*=` Multiplication
+  - `/=` Division
+  - `%=` Modulo => Remainder After Division
+
+# 026 - Operators - Increment And Decrement Operators
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Increment And Decrement Operators
+  "For incrementing And Decrementing Values"
+
+  - Pre/Post Increment
+  - Pre/Post Decrement
+
+# 027 - Operators - Comparison Operators
+
+- also called rational operators
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Comparison Operators
+  "For Comparing Values"
+
+  - `==` Equal
+  - `!=` Not Equal
+  - `>` Greater Than
+  - `<` Less Than
+  - `>=` Greater Than Or Equal
+  - `<=` Less Than Or Equal
+
+# 028 - Operators - Logical Operators
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Logical Operators
+  "For Logic Between Values"
+
+  - `&&` And
+  - `||` Or
+  - `!` Not
+
+# 029 - Operators - Precedence
+
+Operators & Operands
+"Symbols To Operate On Data"
+
+- Operators Precedence
+  "Which One Has Higher Precedence"
+
+- Refernce
+
+  - Operators Precedence Table
+
+- Search
+
+  - Bitwise Operators
+  - Spaceship Operator
+
+- Training
+
+- Try Operators Yourself Before Browsing References
+
+### Spaceship operator: `<=>`
+
+The spaceship operator, also known as the three-way comparison operator, is a new operator introduced in C++20. It is represented by the symbol `"<=>"` and provides a concise way to compare two values.
+
+- The operator returns one of three possible values:
+  - A negative value if the left operand is less than the right operand
+  - A zero value if the left operand is equal to the right operand
+  - A positive value if the left operand is greater than the right operand
+
+The syntax of the spaceship operator is as follows:
+`auto result = value1 <=> value2;`
+
+- The type of "result" is a `std::strong_ordering` type,
+
+  - which is an enumeration type that represents the three possible comparison results.
+
+- The spaceship operator can be used to
+  - implement sorting algorithms,
+  - search algorithms,
+  - and any other algorithm that involves comparing values.
+  - It can also be used with user-defined types, as long as the types define the "<=>" operator.
+
+### Bitwise Operators: `&` `|` `^` `~` `<<` `>>`
+
+In C++, bitwise operators are used to perform operations on individual bits of binary numbers.
+
+- There are six bitwise operators available in C++:
+
+  - AND operator (`&`): This operator returns a 1 in each bit position where both operands have a 1. For example, `7 & 3 would be 3 (011 & 011 = 011)`.
+
+  - OR operator (`|`): This operator returns a 1 in each bit position where at least one operand has a 1. For example, `7 | 3 would be 7 (111 | 011 = 111)`.
+
+  - XOR operator (`^`): This operator returns a 1 in each bit position where only one operand has a 1. For example, `7 ^ 3 would be 4 (111 ^ 011 = 100)`.
+
+  - NOT operator (`~`): This operator flips the bits of the operand, so that all 0s become 1s and all 1s become 0s. For example, `~7 would be -8 (0111 -> 1000)`.
+
+  - Left shift operator (`<<`): This operator shifts the bits of the left operand to the left by a number of positions specified by the right operand. For example, `7 << 2 would be 28 (0111 -> 11100)`.
+
+  - Right shift operator (`>>`): This operator shifts the bits of the left operand to the right by a number of positions specified by the right operand. For example, `7 >> 2 would be 1 (0111 -> 0001)`.
+
+- Bitwise operators are commonly used in low-level programming, such as device drivers and embedded systems, where bitwise operations can be more efficient than arithmetic operations. They can also be used in cryptography and computer graphics, where manipulating individual bits can be important.
