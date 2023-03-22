@@ -10,16 +10,6 @@
 # 003 - Install Visual Studio Code, Debugger And Compiler
 
 ```
-#include <iostream>
-
-int main()
-{
-  std::cout << "Iam Here";
-  return 0;
-}
-```
-
-```
 pacman -Syu
 pacman -Su
 pacman -Ss gcc
@@ -33,9 +23,19 @@ gdb --version
 
 ```
 
+```c++
+#include <iostream>
+
+int main()
+{
+  std::cout << "Iam Here";
+  return 0;
+}
+```
+
 # 008 - Comments And Use Cases
 
-```
+```c++
 // Include Iostream
 #include <iostream>
 
@@ -80,7 +80,7 @@ Syntax
 
 - [Data_Type] [Variable_Name] = [Value]
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -110,7 +110,7 @@ int main()
   -- Related Names
   -- Writing Style
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -146,7 +146,7 @@ int main()
   -- Declare Multiple Variables Without Value + Change Later
   -- Declare Multiple Variables With Same Value
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -185,7 +185,7 @@ int main()
   -- Global Variable
   -- Local Variable
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -214,7 +214,7 @@ int main()
   -- Read Only Value
   -- Can't Declare Without Value
 
-```
+```c++
 #include <iostream>
 using namespace std;
 #define DAYS 9
@@ -234,7 +234,7 @@ int main()
 
 # 014 - Calculate Your Age Application
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -275,7 +275,7 @@ Escape Sequences Characters
   -- \a => Alert => Play Beep During Execution
   -- \r => Carriage Return
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -318,7 +318,7 @@ Data Types
 
 - `sizeof(num)` get size in bytes
 
-```
+```c++
  cout << sizeof(num)
 ```
 
@@ -359,7 +359,7 @@ Data Types
 
 - Compiler can deduce the type of data
 
-```
+```c++
 auto num = 10;
 ```
 
@@ -387,7 +387,7 @@ Primitive Data Types
 
 - `=` Assignment Operator
 
-```
+```c++
  #include <limits.h>
 ..
  cout << INT_MIN << endl;
@@ -408,7 +408,7 @@ Primitive Data Types
 - double => Double The Float
   - 15 Decimal Precision
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -453,7 +453,7 @@ Primitive Data Types
   - `'A'` is single char
   - `"A"` is list of char
 
-```
+```c++
 #include <iostream>
 using namespace std;
 
@@ -522,7 +522,7 @@ Primitive Data Types
   - using identifier = type;
   - typedef unsigned long UL;
 
-```
+```c++
 #include <iostream>
 #include <limits.h>
 using namespace std;
@@ -726,3 +726,18 @@ In C++, bitwise operators are used to perform operations on individual bits of b
   - Right shift operator (`>>`): This operator shifts the bits of the left operand to the right by a number of positions specified by the right operand. For example, `7 >> 2 would be 1 (0111 -> 0001)`.
 
 - Bitwise operators are commonly used in low-level programming, such as device drivers and embedded systems, where bitwise operations can be more efficient than arithmetic operations. They can also be used in cryptography and computer graphics, where manipulating individual bits can be important.
+
+# 031 - Control Flow – If Condition Introduction
+
+Control Flow
+
+- If Condition Introduction
+
+Syntax
+
+```
+if (Condition Is True)
+  {
+    // Do Something
+  }
+```
