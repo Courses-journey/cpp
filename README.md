@@ -849,3 +849,311 @@ Control Flow
 ```
 
 # 037 - Switch Training - Create Three Application
+
+# 038 - Array - What Is Array ?
+
+Arrays
+
+- What Is Array ?
+  - Collection Of Elements Of The Same Type
+  - Placed in Contiguous Memory Locations
+  - Referenced By Index Started From 0
+- Why We Need Array ?
+- Creating Array Syntax
+- Check Array Size
+- Create Array Without Size
+
+- Compiler can deduce the number of elements whithout typing `[size]` u can directly type `[]`
+
+```c++
+int nums[5] = {1,2,3,4,5};
+int nums0[] = {1,2,3,4,5};
+```
+
+- U can remove `=`
+
+```c++
+int nums[5]{1,2,3,4,5};
+int nums0[]{1,2,3,4,5};
+```
+
+code:
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int nums[4] = {100, 200, 300, 400};
+  cout << sizeof(int) << "\n";  // 4 Bytes
+  cout << sizeof(nums) << "\n"; // 16 Bytes
+
+  double dos[4] = {100, 200, 300, 400};
+  cout << sizeof(double) << "\n"; // 8 Bytes
+  cout << sizeof(dos) << "\n";    // 32 Bytes
+
+  int rands[]{100, 5000, 950};
+  return 0;
+}
+```
+
+# 039 - Array - Access Elements & Memory Location
+
+Arrays
+
+- Access Array Elements
+- Check Element Location
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int nums[]{100, 200, 300};
+
+  cout << "First Element: " << nums[0] << "\n";
+  cout << "Last Element: " << nums[2] << "\n"; // Number Of Elements - 1
+
+  cout << "Location: " << &nums[0] << "\n";
+  cout << "Location: " << &nums[1] << "\n";
+  cout << "Location: " << &nums[2] << "\n";
+
+  return 0;
+}
+```
+
+# 040 - Array - Add And Update Elements
+
+Arrays
+
+- Declare Empty Array
+
+```c++
+  int nums[4];
+```
+
+- Add Elements To Array
+
+```c++
+  nums[3] = 400; // Last Element
+```
+
+- Update Array Elements
+
+```c++
+  nums[3] = 400; // Last Element
+```
+
+- Get Length Of Array With Sizeof
+
+```c++
+ int anums[] = {100, 200, 300, 400, 500, 600}; // 24 / 4 = 6
+  cout << "Array Elements Count Is " << sizeof(anums) / sizeof(anums[0]);
+```
+
+# 041 - Array - Two Dimensional Array
+
+Arrays
+
+- Two Dimensional Arrays AKA [2D Array]
+
+- Search For
+  - Matrix Operations
+  - 3D Array
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int points_a[3] = {1, 2, 3};
+  int points_b[3] = {4, 5, 6};
+  int points_c[3] = {7, 8, 9};
+
+  // Good Practice
+
+  const int rows = 3;
+  const int columns = 3;
+  int points[rows][columns] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  cout << points[1][2] << "\n"; // 6
+  cout << points[2][0] << "\n"; // 7
+  cout << points[2][2] << "\n"; // 9
+
+  // Bad Practice
+  // int points[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  // cout << points[1][2] << "\n"; // 6
+  // cout << points[2][0] << "\n"; // 7
+  // cout << points[2][2] << "\n"; // 9
+
+  return 0;
+}
+```
+
+# 042 - Array - Class Array
+
+Arrays
+
+- Array Class
+- Test Methods
+
+Syntax `Template<Type, Size> Identifier;`
+
+- Include
+
+```c++
+#include <array>
+```
+
+```c++
+  int points[4] = {1, 2, 3, 4}; // C-Style Array
+  array<int, 4> points = {1, 2, 3, 4};
+```
+
+C-style arrays in C++ have some common problems that you may encounter:
+
+- **Lack of Bounds Checking:** C-style arrays do not have bounds checking, so you can easily access an index outside the array boundaries. This can cause undefined behavior, which can lead to program crashes, data corruption, or security vulnerabilities.
+
+- **Fixed Size:** C-style arrays have a fixed size, meaning that you cannot change the size of the array at runtime. This can be problematic if you need to dynamically allocate memory or if you don't know the size of the array in advance.
+
+- **Decay to Pointer:** When passed to a function, C-style arrays decay to pointers to their first element. This can lead to problems when the size of the array is not known within the function, making it difficult to determine the array boundaries.
+
+- **No Copying or Assigning:** C-style arrays do not support copying or assigning of arrays. This means that you cannot assign an array to another array using the = operator, nor can you pass an array by value to a function.
+
+To overcome these problems, you may consider using C++ STL containers, such as `std::array`, `std::vector`, or `std::list`, which provide dynamic allocation, bounds checking, and other features that C-style arrays lack.
+
+# 043 - Array - Methods Discussions
+
+Arrays
+
+**Useful Methods**
+
+- at(index)
+  - Access elemt by index like `[index]`
+- front
+  - First element
+- back
+  - Last element
+- fill
+- size
+- empty
+
+```c++
+#include <array>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  array<int, 4> nums = {100, 200, 300, 400};
+  cout << nums[0] << "\n";      // 100
+  cout << nums.front() << "\n"; // 100
+  cout << nums[3] << "\n";      // 400
+  cout << nums.back() << "\n";  // 400
+  cout << nums.at(1) << "\n";   // 200
+  cout << nums.size() << "\n";  // 4
+  cout << nums.empty() << "\n"; // 0 => False
+  return 0;
+}
+```
+
+# 045 - String - What Is A String
+
+String
+
+- What Is String ?
+- String Types
+  - C Style String Using
+  - String Class Using Standard Library
+- Test Types Size
+- Null Terminated String
+- `\0` => Null
+
+- Remember
+  - String Is Array Of Characters
+
+```c++
+ char name_a[] = "Elzero";
+```
+
+```c++
+ char name_b[] = {'E', 'l', 'z', 'e', 'r', 'o', '\0'};
+```
+
+```c++
+ string name_c = "Elzero";
+```
+
+code:
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "Iam Dragon\n";   // 12 => Remember
+  cout << "Iam\0 Dragon\n"; // Iam
+  cout << "\n";
+
+  char name_a[] = "Elzero";
+  cout << name_a << "\n";         // Elzero\0
+  cout << sizeof(name_a) << "\n"; // 7
+  cout << name_a[0] << "\n";      // E
+  cout << name_a[5] << "\n";      // o
+
+  cout << int(name_a[6]) << "\n"; // \0 => ASCII Value => 0
+  cout << int('\b') << "\n";      // \b => ASCII Value => 8
+
+  char name_b[] = {'E', 'l', 'z', 'e', 'r', 'o', '\0'};
+  cout << name_b << "\n";         // Elzero\0
+  cout << sizeof(name_b) << "\n"; // 7
+  cout << name_b[0] << "\n";      // E
+  cout << name_b[5] << "\n";      // o
+
+  string name_c = "Elzero";
+  cout << name_c << "\n";         // Elzero\0
+  cout << sizeof(name_c) << "\n"; // 32
+  cout << name_c[0] << "\n";      // E
+  cout << name_c[5] << "\n";      // o
+
+  return 0;
+}
+```
+
+# 046 - String - Concatenating
+
+String
+
+- Concatenating Strings
+  - Normal Way
+  - strcat
+    - => Include `string.h`
+    - => Include `cstring`
+  - With +
+  - append
+
+```c++
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+  char fname[] = "Osama ";
+  char lname[] = "Elzero";
+
+  cout << fname << lname << "\n";
+  cout << strcat(fname, lname) << "\n";
+
+  string firstname = "Osama ";
+  string lastname = "Elzero";
+
+  cout << firstname + lastname << "\n";
+  cout << firstname.append(lastname) << "\n";
+
+  return 0;
+}
+```
