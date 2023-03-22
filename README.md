@@ -727,7 +727,7 @@ In C++, bitwise operators are used to perform operations on individual bits of b
 
 - Bitwise operators are commonly used in low-level programming, such as device drivers and embedded systems, where bitwise operations can be more efficient than arithmetic operations. They can also be used in cryptography and computer graphics, where manipulating individual bits can be important.
 
-# 031 - Control Flow – If Condition Introduction
+# 030 - Control Flow – If Condition Introduction
 
 Control Flow
 
@@ -735,9 +735,89 @@ Control Flow
 
 Syntax
 
-```
+```c++
 if (Condition Is True)
   {
     // Do Something
   }
 ```
+
+# 031 - Control Flow - If, Else If, Else
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int age = 15;
+  int points = 450;
+  int rank = 4;
+
+  if (age >= 18)
+  {
+    cout << "Welcome Your Age Is Ok\n";
+  }
+  else if (points > 500)
+  {
+    cout << "Welcome Your Points Is Ok\n";
+  }
+  else if (rank > 5)
+  {
+    cout << "Welcome Your Rank Is Ok\n";
+  }
+  else
+  {
+    cout << "Iam Sorry\n";
+  }
+
+  return 0;
+}
+```
+
+# 032 - Control Flow - Nested If Conditions
+
+# 033 - Control Flow - Ternary Conditional Operator
+
+Control Flow
+
+- Ternary Operator
+
+Syntax
+
+```
+(Condition) ? True : False;
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int age = 15;
+
+  string msg = age >= 18 ? "Age Is OK\n" : "Age Is Not OK\n";
+
+  cout << msg;
+
+  return 0;
+}
+```
+
+# 034 - Control Flow - Nested Ternary Operator
+
+```c++
+  cout << (age >= 18 ? "OK\n" : (points >= 500 ? "OK P\n" : "No P\n"));
+```
+
+- U can remove `{}` if u have one line
+
+```c++
+  if (age >= 18)
+    cout << "OK\n";
+  else
+    cout << "Not OK\n";
+```
+
+# 035 - Condition Trainings - Create Four Application
