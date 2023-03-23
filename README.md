@@ -1184,3 +1184,181 @@ int main()
   cout << end(nums) - begin(nums);
 }
 ```
+
+# 047 - Loop With For
+
+Loop
+
+- Loop With For
+- Loop On Array
+
+Syntax
+
+```c++
+for(init; Condition; Update)
+{
+// Block Of Code
+}
+```
+
+# 048 - Loop With For - Advanced Syntax
+
+- U can write loop without `{}`
+  - if block of code is one line
+
+```c++
+  for (int i = 0; i < numsCount; i++)
+  {
+    cout << nums[i] << "\n";
+  }
+
+```
+
+```c++
+  int i = 0;
+
+  for (;;)
+  {
+    cout << nums[i] << "\n";
+    i++;
+    if (i == numsCount)
+    {
+      break;
+    }
+  }
+
+```
+
+# 050 - Loop With For - Nested Loop
+
+```c++
+  for (int i = 0; i < 3; i++)
+  {
+    cout << "Product Name:\n";
+    cout << products[i] << "\n";
+    cout << "Sizes:\n";
+    for (int j = 0; j < 3; j++)
+    {
+      cout << sizes[j];
+      if (j < 2)
+      {
+        cout << ", ";
+      }
+    }
+    cout << "\n";
+    cout << "=====================\n";
+  }
+```
+
+# 051 - Loop With While
+
+Loop
+
+- Loop With While
+
+- usually used with user inputs
+
+Syntax
+
+```c++
+while (Condition Is True)
+{
+
+}
+```
+
+```c++
+  // for (int i = 0; i < 5; i++)
+  // {
+  //   cout << i << "\n";
+  // }
+
+  int i = 0;
+
+  while (i < 5)
+  {
+    cout << i << "\n";
+    i++;
+    if (i == 2)
+    {
+      break;
+    }
+  }
+
+```
+
+# 052 - Loop With Do While
+
+Loop
+
+- Loop With Do...While
+
+- **Do first then check**
+
+Syntax
+
+```c++
+  do
+  {
+
+  } while (Condition Is True);
+```
+
+```c++
+  int index = 6;
+
+  // while (index < 6)
+  // {
+  //   cout << index << "\n";
+  //   index++;
+  // }
+
+  do
+  {
+    cout << index << "\n";
+    index++;
+  } while (index < 6);
+```
+
+# 053 - Loop - Break, Continue
+
+Loop
+
+- Break
+- Continue
+
+```c++
+  int nums[] = {10, 20, 30, 40, 20, 50};
+
+  for (int i = 0; i < 6; i++)
+  {
+    cout << nums[i] << "\n";
+
+    if (nums[i] == 10)
+    {
+      break;
+    }
+
+    // if (nums[i] == 20)
+    // {
+    //   continue;
+    // }
+
+    // cout << "After\n";
+  }
+```
+
+# 054 - Loop Training Create Three Apps
+
+Loop
+
+- Compare
+
+  - `For` => Specific Number Of Loops
+  - `While` => Loop As Long Condition Is True
+  - `Do While` => Always Execute Once
+
+- Create Three Apps
+  - Count Positive & Even Numbers Only
+  - Guess The Number
+  - Reversed Elements From User
