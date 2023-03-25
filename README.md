@@ -1362,3 +1362,94 @@ Loop
   - Count Positive & Even Numbers Only
   - Guess The Number
   - Reversed Elements From User
+
+# 055 - Function - Introduction
+
+Function
+
+- DRY
+- User Defined and Built-In
+- Syntax
+
+```c++
+  returnDataType functionName(Param1, Param2, Param3)
+  {
+  // Function Body Contain Block Of Code
+  }
+```
+
+- Example
+- Why We Use Functions
+- Declare A Function And Call It
+
+```c++
+  void sayHello()
+  {
+    cout << "Hi Osama.\n";
+  }
+```
+
+# 056 - Function With Parameter
+
+Function
+
+- Parameters & Arguments
+
+```c++
+  void sayHello(string msg, string name, int age)
+  {
+    cout << msg << " " << name << ",\n";
+    cout << name << "\'s Age Is: " << age << "\n";
+  }
+```
+
+# 057 - Function With Parameter Training
+
+Function
+
+- Parameters & Arguments Training
+  - Create Ice Box
+  - Simple Calculator
+
+# 058 - Function Parameter Default Value
+
+Function
+
+- Parameter Default Value
+
+```C++
+  void details(string msg = "Welcome", string name = "Unknown")
+  {
+    cout << msg << " " << name << "\n";
+  }
+```
+
+# 059 - Function - Passing Array As Parameter
+
+Function
+
+- Passing Array As Parameter
+
+```c++
+  void calc(int nums[], int count)
+  {
+    int result = 0;
+    for (int i = 0; i < count; i++)
+    {
+      result += nums[i];
+    }
+    cout << "Result Is: " << result << "\n";
+  }
+```
+
+# 060 - Function - Return Statement + Void
+
+Function
+
+- Return Statement
+  - Return vs No Return Examples
+  - Return As Value In Variable
+  - Main Function Return Test
+  - Nothing After Return
+  - Void With Return ...! Why ?
+    - work as `break;`
