@@ -1453,3 +1453,44 @@ Function
   - Nothing After Return
   - Void With Return ...! Why ?
     - work as `break;`
+
+# 061 - Function - Forward Declaration
+
+Function
+
+- Forward Declaration
+
+```c++
+  // Forward Declaration
+  int calc(int a, int b);
+```
+
+```c++
+  // Declaration
+  int calc(int a, int b)
+  {
+    return a + b;
+  }
+```
+
+code:
+
+```c++
+  #include <iostream>
+  using namespace std;
+
+  int calc(int a, int b);
+
+  int main()
+  {
+    // Call
+    cout << calc(10, 20);
+    return 0;
+  }
+
+  // Declaration
+  int calc(int a, int b)
+  {
+    return a + b;
+  }
+```
