@@ -1610,3 +1610,23 @@ int main()
   return 0;
 }
 ```
+
+# 064 - Built-In Functions - Training - Create 3 Apps
+
+Function
+
+- Built-In Functions
+
+  - Algorithm Header
+    - min
+    - max
+    - count
+
+- Create 3 Applications
+  - Find Minimum Number
+  - Find Maximum Number
+  - Count Number Occurance
+
+```c++
+#include <algorithm>
+```
