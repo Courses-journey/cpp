@@ -1719,3 +1719,212 @@ int main()
   return 0;
 }
 ```
+
+# 067 - Vector - What Is Vector
+
+Vector
+
+- What Is Vector ?
+
+  - Vector Is A Container For Similar Data Like Array
+  - Vectors Are Dynamic Arrays => Array That Can Change In Size
+
+- Vector Is A Class Template
+
+  - Vector Syntax =>
+
+  ```c++
+  std::vector<Type> VariableName
+  ```
+
+  ```c++
+  // declaring
+  std::vector<int> vec;
+
+  // init with elements
+  std::vector<int> vec2 = {1,2,3};
+  std::vector<int> vec2 {1,2,3};
+
+  // init with size and all value [5] will set to [zero]
+  std::vector<int> vec2 (5);
+  // init with size and all value [5] will set to [10]
+  std::vector<int> vec2 (5,10);
+  ```
+
+  - Vector Create With All Methods
+  - Loop On Elements
+
+- Important Notes
+
+  - Keep away from `[]` while dealing with vector
+
+- `.size()` get size of vector
+- `.at(index)` to acess and modify elements
+- `.push_back()` to add elements
+
+# 068 - Vector Versus Array
+
+Vector
+
+- Vector vs Array
+
+## Vector
+
+- It Need A Standard Header To Work
+- Can Be Resized After Insertion Or Deletion Of Elements
+- Not Index Based And Elements Accessed By Iterators
+- Vectors Are Slower Than Arrays
+- Vectors Occupy More Memory
+- Available In C++ Only
+
+## Array
+
+- C-Array Is Language Construct
+- Cannot Be Resized After Its Defined
+- Elements Accessed By Indexes
+- Arrays Are Faster Than Vectors
+- Arrays Occupy Less Memory
+- Available In C & C++
+
+When To Use Vector
+
+- When We Don't Know The Size Of The List
+
+When We Use Array
+
+- When It Comes To Performance & Speed
+
+[1] After Learning Pointers There Will Be More Things To Compare
+[2] You Can Still Create Dynamic Array But Vector Is Better
+
+# 069 - Vector - Access, Add, Update And Delete
+
+Vector
+
+- Access
+
+  - `at()`
+  - Square Brackets `[]` <= Do Not Use
+
+- Add
+
+  - `push_back` => Add Element To The End
+
+- Update
+
+  - `at()`
+
+- Delete
+  - `pop_back()` => Remove Element From The End
+
+```c++
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+  vector<int> nums = { 10, 20, 30 };
+  cout << nums.at(2) << "\n";
+  cout << nums[2] << "\n";
+
+  nums.push_back(40);
+  cout << nums.size() << "\n"; // 4
+  cout << nums.at(3) << "\n"; // 40
+
+  nums.at(3) = 100;
+  cout << nums.at(3) << "\n"; // 100
+
+  nums.push_back(500);
+  cout << nums.size() << "\n"; // 5
+  cout << nums.at(4) << "\n"; // 500
+
+  nums.pop_back();
+  cout << nums.size() << "\n"; // 4
+
+  return 0;
+}
+```
+
+# 070 - Vector - Functions
+
+Vector
+
+- `size()` => Current Number Of Elements
+- `max_size()` => Maximum Number Of Elements
+- `capacity()` => Storage Capacity
+- `front()` => First Element
+- `back()` => Last Element
+- `clear()` => Clear All Elements From Vector
+- `empty()` => Check If Its Empty Or No
+
+# 071 - Vector - Iterator And Why To Use
+
+Vector
+
+- Iterator
+
+- Containers
+
+  - Array
+  - Vector
+  - List
+
+- What Is Iterators
+
+  - Iterators Used To Point To Memory Address Of The Container
+
+- Why We Use Iterators
+
+  - [1] Simplify The Code => No Need To See The Full Iteration On Containers
+  - [2] Support For Many Algorithms Like Sorting And Finding
+  - [3] Allow The Dealing With One Element Without The Need To Load The Full List
+  - [4] Work The Same Way With All Containers
+  - [5] It Reduce The Complexity And Execution Time Of The Application
+
+- Syntax
+
+  ```c++
+  Container<Type>::iterator IteratorName;
+  ```
+
+- Initialize
+
+  - With Vector Syntax
+  - With Auto Keyword
+
+- Print
+- `[*] Dereference `=> Dont Print The Iterator, Print What Its Point To
+
+- Notes
+
+  - This Is Not Pointer, We Will Talk About Pointer Later
+
+- Search For
+  - Iterators Type
+  - C++ Containers
+
+```c++
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+  vector<int> nums = { 10, 20, 30, 40 };
+  vector<int>::iterator it = nums.begin();
+  auto ite = nums.begin() + 1;
+
+  cout << "First Element Is: " << *it << "\n";
+  cout << "Second Element Is: " << *ite << "\n";
+  cout << "First Element Is: " << *nums.begin() << "\n";
+
+  nums.erase(nums.begin(), nums.begin() + 2); // not include end
+
+  cout << "First Element After Delete Is: " << *nums.begin() << "\n";
+
+  return 0;
+}
+```
